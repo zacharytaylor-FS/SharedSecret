@@ -18,7 +18,7 @@ console.log(`Env variables: ${USERNAME}, ${PASS}, ${PORT}`)
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', { 
-    title: 'Express', 
+    title: process.env.FRAMEWORK, 
     hardcoding: `${USERNAME1},${PASS1},${PORT1}`,
     envVariables: `${USERNAME},${PASS},${PORT}` 
   });
